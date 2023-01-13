@@ -8,16 +8,17 @@ import{
  
 const StatusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
-export default function Header(){
-    return
+export default function header(){
+    return(
     <View style={styles.container}>
     
         </View>
+    )
 }
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: '#000000',
+        backgroundColor: '#32ff7e',
         paddingTop: StatusBarHeight,
     }
 })
