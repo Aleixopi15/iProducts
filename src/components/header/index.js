@@ -19,7 +19,7 @@ export default function header(){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: '#ff234f',
+        backgroundColor: '#32ff7e',
         paddingTop: StatusBarHeight,
     },
 })
