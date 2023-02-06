@@ -5,6 +5,8 @@ import Home from './pages/home';
 import Search from './pages/search';
 import Orders from './pages/orders';
 import Profile from './pages/profile';
+import Welcome from './pages/welcome';
+import SignIn from './pages/sigin';
 
 import { Entypo, Feather } from '@expo/vector-icons'
 
@@ -25,6 +27,17 @@ export default function Routes(){
         }
     }}
     >
+        <Stack.Screen
+            name="Welcome"
+            component={Welcome}
+            />
+            
+        <Stack.Screen
+            name="SignIn"
+            component={SignIn}
+            />
+        
+        
         <Tab.Screen
          name="Inicio"
         component={Home} 
@@ -67,4 +80,5 @@ export default function Routes(){
 
     </Tab.Navigator>
     )
-}
+};
+
