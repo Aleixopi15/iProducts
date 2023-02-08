@@ -1,5 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './pages/home';
 import Search from './pages/search';
@@ -11,74 +12,23 @@ import SignIn from './pages/sigin';
 import { Entypo, Feather } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
-
+const Stack = createNativeStackNavigator();
 export default function Routes(){
     return(
-    <Tab.Navigator
-    tabBarOptions={{
-        style:{
-            
-        },
-        activeTintColor: '#000000',
-        tabStyle:{
-            paddingBottom: 5,
-            paddingTop: 5,
-
-        }
-    }}
-    >
+    <Stack.Navigator>
         <Stack.Screen
             name="Welcome"
             component={Welcome}
+            options={{ headerShown: false }}
             />
             
         <Stack.Screen
             name="SignIn"
             component={SignIn}
+            options={{ headerShown: false }}
             />
         
-        
-        <Tab.Screen
-         name="Inicio"
-        component={Home} 
-        options={{
-            tabBarIcon: ({ size, color }) => (
-                <Entypo name="home" size={size} color={color}/>
-            )
-        }}
-        />
-
-        <Tab.Screen 
-        name="Pesquisar"
-        component={Search} 
-        options={{
-            tabBarIcon: ({ size, color }) => (
-                <Feather name="search" size={size} color={color}/>
-            )
-        }}
-        />
-
-        <Tab.Screen
-        name="Pedidos" 
-        component={Orders} 
-        options={{
-            tabBarIcon: ({ size, color }) => (
-                <Feather name="shopping-bag" size={size} color={color}/>
-            )
-        }}
-        />
-
-        <Tab.Screen 
-        name="Perfil" 
-        component={Profile} 
-        options={{
-            tabBarIcon: ({ size, color }) => (
-                <Feather name="user" size={size} color={color}/>
-            )
-        }}
-        />
-
-    </Tab.Navigator>
+    </Stack.Navigator>
     )
 };
 
