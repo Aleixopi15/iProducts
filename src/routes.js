@@ -12,7 +12,9 @@ import SignIn from './pages/sigin';
 import { Entypo, Feather } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
+
 const Stack = createNativeStackNavigator();
+
 export default function Routes(){
     return(
     <Stack.Navigator>
@@ -32,3 +34,64 @@ export default function Routes(){
     )
 };
 
+/*
+export default function Routes(){
+    return(
+        <Tab.Navigator
+        tabBarOptions={{
+            style:{
+                
+            },
+            activeTintColor: '#000000',
+            tabStyle:{
+                paddingBottom: 5,
+                paddingTop: 5,
+    
+            }
+        }}
+        >
+            <Tab.Screen
+             name="Inicio"
+            component={Home} 
+            options={{
+                tabBarIcon: ({ size, color }) => (
+                    <Entypo name="home" size={size} color={color}/>
+                )
+           
+            }}
+            />
+    
+            <Tab.Screen 
+            name="Pesquisar"
+            component={Search} 
+            options={{
+                tabBarIcon: ({ size, color }) => (
+                    <Feather name="search" size={size} color={color}/>
+                )
+            }}
+            />
+    
+            <Tab.Screen
+            name="Pedidos" 
+            component={Orders} 
+            options={{
+                tabBarIcon: ({ size, color }) => (
+                    <Feather name="shopping-bag" size={size} color={color}/>
+                )
+            }}
+            />
+    
+            <Tab.Screen 
+            name="Perfil" 
+            component={Profile} 
+            options={{
+                tabBarIcon: ({ size, color }) => (
+                    <Feather name="user" size={size} color={color}/>
+                )
+            }}
+            />
+    
+        </Tab.Navigator>
+        )
+    };
+    */
