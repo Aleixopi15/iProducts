@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from 'react-native'; 
+import { View, Text, StyleSheet } from 'react-native'; 
 
 export default function Signin() {
     return (
@@ -10,3 +10,9 @@ export default function Signin() {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container:{
+        
+    }
+})
