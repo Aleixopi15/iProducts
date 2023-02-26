@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'; 
 
+import * as Animation from 'react-native-animatable'
+
 export default function Signin() {
     return (
         <View style={styles.container}>
@@ -40,5 +42,4 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: '#4ECB19'
     },
-    containerHeader
 })
