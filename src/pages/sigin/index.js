@@ -40,6 +40,7 @@ export default function Signin() {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor: '#4ECB19'
+        backgroundColor: '#4ECB19',
+        paddingTop: 60, 
     },
 })

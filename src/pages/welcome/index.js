@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
-        paddingStart: '5%',
+        paddingStart: '25%',
         paddingEnd: '5%',
         },
         title:{
@@ -68,13 +68,12 @@ const styles = StyleSheet.create({
         },
         button:{
             position: 'absolute',
-            backgroundColor:'fff',
+            backgroundColor:'#4ECB19',
             borderRadius: 50,
             paddingVertical: 8,
             width: '60%',
             alignItems: 'center',
             justifyContent: 'center',
-
         },
         buttonText:{
             fontSize: 18,
