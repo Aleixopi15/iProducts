@@ -1,9 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'; 
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, useState, } from 'react-native'; 
 
 import * as Animation from 'react-native-animatable'
 
+import firebase from "../../config/firebase";
+
+import { useNavigation } from "@react-navigation/native";
+
 export default function Signin() {
+    const navigation = useNavigation();
+
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")
+    const [errorLogin, setErrorLogin] = useState("")
+
+    const loginFirebase = ()=>{
+        
+    }
+
+
     return (
         <View style={styles.container}>
             <Animation.View animation="fadeInLeft" style={styles.containerHeader}>
@@ -28,7 +43,9 @@ export default function Signin() {
                     <Text style={styles.buttonText}>Acessar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonRegister}>
+                <TouchableOpacity style={styles.buttonRegister}
+                onPress={ () => navigation.navigate('SignUp')}
+                >
                     <Text style={styles.registerText}>Não possui conta?</Text>
                 </TouchableOpacity>
 

@@ -8,6 +8,7 @@ import Orders from './pages/orders';
 import Profile from './pages/profile';
 import Welcome from './pages/welcome';
 import SignIn from './pages/sigin';
+import SignUp from './pages/signup'
 
 import { Entypo, Feather } from '@expo/vector-icons'
 
@@ -27,6 +28,12 @@ export default function Routes(){
         <Stack.Screen
             name="SignIn"
             component={SignIn}
+            options={{ headerShown: false }}
+            />
+
+        <Stack.Screen
+            name="SignUp"
+            component={SignUp}
             options={{ headerShown: false }}
             />
         
