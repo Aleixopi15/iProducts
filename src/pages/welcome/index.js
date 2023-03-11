@@ -26,7 +26,7 @@ export default function Welcome() {
             </View>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text>
+                <Text style={styles.text}>
                     Faça seu login para continuar!
                 </Text>
                 <TouchableOpacity 
@@ -64,20 +64,33 @@ const styles = StyleSheet.create({
             fontSize: 200, 
         },
         text:{
-
+            top: 20,
+            fontWeight: 'bold',
+  
         },
         button:{
             position: 'absolute',
             backgroundColor:'#4ECB19',
             borderRadius: 50,
-            paddingVertical: 8,
-            width: '60%',
+            top: 140,            
+            left: 30,
+            right: 30,
+            bottom: 80,
             alignItems: 'center',
             justifyContent: 'center',
+
+            /*position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            justifyContent: 'center',
+            alignItems: 'center'
+            */
         },
         buttonText:{
             fontSize: 18,
-            color: 'fff',
+            color: '#FFF',
             fontWeight: 'bold',
             
         }
