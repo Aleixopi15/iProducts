@@ -10,14 +10,6 @@ import { useNavigation } from "@react-navigation/native";
 export default function Signin() {
     const navigation = useNavigation();
 
-    const [email, setEmail] = useState("")
-    const [senha, setSenha] = useState("")
-    const [errorLogin, setErrorLogin] = useState("")
-
-    const loginFirebase = ()=>{
-        
-    }
-
 
     return (
         <View style={styles.container}>
