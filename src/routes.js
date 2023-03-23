@@ -38,18 +38,21 @@ export default function Routes(){
             />
         
     </Stack.Navigator>
+
+
+
     )
 };
 
-/*
-export default function Routes(){
+
+export function RoutesHome(){
     return(
         <Tab.Navigator
         tabBarOptions={{
             style:{
-                
+                activeTintColor: '#000000',
             },
-            activeTintColor: '#000000',
+            
             tabStyle:{
                 paddingBottom: 5,
                 paddingTop: 5,
@@ -101,4 +104,3 @@ export default function Routes(){
         </Tab.Navigator>
         )
     };
-    */
