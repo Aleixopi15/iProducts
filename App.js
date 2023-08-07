@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./src/routes";
-import RoutesTwo from "./src/routestwo"
+
 
 export default function App() {
   return(
