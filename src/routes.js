@@ -16,9 +16,9 @@ const Tab = createBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
 
-export default function Routes(){
+export function Routes(){
     return(
-    <Stack.Navigator>
+    <Stack.Navigator >
         <Stack.Screen
             name="Welcome"
             component={Welcome}
@@ -38,14 +38,10 @@ export default function Routes(){
             />
             <Stack.Screen
             name="Home"
-            component={Home}
+            component={RoutesHome}
             options={{ headerShown: false }}
             />
-            
-        
     </Stack.Navigator>
-
-
 
     )
 };
@@ -53,7 +49,7 @@ export default function Routes(){
 export function RoutesHome(){
     return(
         <Tab.Navigator
-        tabBarOptions={{
+        screenOptions={{
             style:{
                 activeTintColor: '#000000',
             },
@@ -75,7 +71,7 @@ export function RoutesHome(){
            
             }}
             />
-    
+
             <Tab.Screen 
             name="Pesquisar"
             component={Search} 
