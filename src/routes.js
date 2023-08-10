@@ -66,8 +66,8 @@ export function RoutesHome(){
             options={{
                 tabBarIcon: ({ size, color }) => (
                     <Entypo name="home" size={size} color={color}/>
-                )
-           
+                ),
+                headerShown: false 
             }}
             />
 
@@ -77,7 +77,8 @@ export function RoutesHome(){
             options={{
                 tabBarIcon: ({ size, color }) => (
                     <Feather name="search" size={size} color={color}/>
-                )
+                ),
+                headerShown: false 
             }}
             />
     
@@ -87,7 +88,8 @@ export function RoutesHome(){
             options={{
                 tabBarIcon: ({ size, color }) => (
                     <Feather name="shopping-bag" size={size} color={color}/>
-                )
+                ),
+                headerShown: false 
             }}
             />
     
@@ -97,7 +99,8 @@ export function RoutesHome(){
             options={{
                 tabBarIcon: ({ size, color }) => (
                     <Feather name="user" size={size} color={color}/>
-                )
+                ),
+                headerShown: false 
             }}
             />
     
