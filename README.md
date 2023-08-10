@@ -1,8 +1,6 @@
 # iProducts
 
-Desenvolvedores:
-Aleixopi15#8011
-miojo
+
 
 Iniciar:
 
