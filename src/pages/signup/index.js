@@ -31,6 +31,13 @@ export default function Signin() {
                 </TouchableOpacity>
 
                 
+                <TouchableOpacity style={styles.buttonRegister}
+                onPress={ () => navigation.navigate('SignIn')}
+                >
+                    <Text style={styles.registerText}>Voltar para o Login</Text>
+                </TouchableOpacity>
+
+                
 
             </Animation.View>
         </View>
