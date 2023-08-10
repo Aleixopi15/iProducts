@@ -13,7 +13,6 @@ import SignUp from './pages/signup'
 import { Entypo, Feather } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator();
-
 const Stack = createNativeStackNavigator();
 
 export function Routes(){
