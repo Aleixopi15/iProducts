@@ -23,7 +23,11 @@
     "react-native-firebase": "^5.6.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
+<<<<<<< HEAD
     "react-native-svg": "^12.1.1",
+=======
+    "react-navigation-tabs": "^2.11.2",
+>>>>>>> 4ebbe5936617758cee5bb70f4b47ebb1357768d0
     "watchman": "^1.0.0"
   },
   "devDependencies": {
