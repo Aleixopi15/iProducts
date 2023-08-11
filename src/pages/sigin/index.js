@@ -19,13 +19,13 @@ export default function Signin() {
       <Input borderRadius={'15'} w={{
       base: "120%",
       md: "25%"
-    }} InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="#4ECB19" />} placeholder="Name" />
+    }} InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="#4ECB19" />} placeholder="Email" />
       <Input borderRadius={'15'} w={{
       base: "120%",
       md: "25%"
     }} type={show ? "text" : "password"} InputRightElement={<Pressable onPress={() => setShow(!show)}>
             <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="#4ECB19" />
-          </Pressable>} placeholder="Password" />
+          </Pressable>} placeholder="Senha" />
           <Button w={'40'} borderRadius={'15'} background={'#4ECB19'} onPress={() => navigation.navigate('Home')}>Acessar</Button>
     </Stack>
 
