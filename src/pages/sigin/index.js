@@ -1,5 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, useState, } from 'react-native'; 
+import { Input, Icon, Stack, Pressable, Center, NativeBaseProvider, Button } from "native-base";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import * as Animation from 'react-native-animatable'
 
@@ -9,42 +11,24 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function Signin() {
     const navigation = useNavigation();
+    const [show, setShow] = React.useState(false);
 
 
     return (
-        <View style={styles.container}>
-            <Animation.View animation="fadeInLeft" style={styles.containerHeader}>
-            <Text>
-            Bem-vindo(a)
-            </Text>
-            </Animation.View>
+        <Stack space={10} w="100%" p="100" alignItems="center">
+      <Input borderRadius={'15'} w={{
+      base: "120%",
+      md: "25%"
+    }} InputLeftElement={<Icon as={<MaterialIcons name="person" />} size={5} ml="2" color="#4ECB19" />} placeholder="Name" />
+      <Input borderRadius={'15'} w={{
+      base: "120%",
+      md: "25%"
+    }} type={show ? "text" : "password"} InputRightElement={<Pressable onPress={() => setShow(!show)}>
+            <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="#4ECB19" />
+          </Pressable>} placeholder="Password" />
+          <Button w={'40'} borderRadius={'15'} background={'#4ECB19'} onPress={() => navigation.navigate('Home')}>Acessar</Button>
+    </Stack>
 
-            <Animation.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Email</Text>
-                <TextInput
-                placeholder="Digite um e-mail..."
-                styles={styles.input}
-                />
-                <Text style={styles.title}>Senha</Text>
-                <TextInput
-                placeholder="Sua senha"
-                styles={styles.input}
-                />
-
-                <TouchableOpacity style={styles.button}
-                onPress={ () => navigation.navigate('Home')}
-                >
-                    <Text style={styles.buttonText}>Acessar</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.buttonRegister}
-                onPress={ () => navigation.navigate('SignUp')}
-                >
-                    <Text style={styles.registerText}>Não possui conta?</Text>
-                </TouchableOpacity>
-
-            </Animation.View>
-        </View>
     );
 }
 
@@ -54,4 +38,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#4ECB19',
         paddingTop: 60, 
     },
+    
 })
