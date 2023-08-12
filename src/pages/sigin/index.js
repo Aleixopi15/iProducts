@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, useState, } from 'react-native'; 
 import { Input, Icon, Stack, Pressable, Center, NativeBaseProvider, Button, Link } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
-
+import Header from '../../components/header'
 import * as Animation from 'react-native-animatable'
 
 import firebase from "../../config/firebase";
@@ -15,6 +15,7 @@ export default function Signin() {
 
 
     return (
+      
         <Stack space={10} w="100%" p="100" alignItems="center">
       <Input borderRadius={'15'} w={{
       base: "140%",

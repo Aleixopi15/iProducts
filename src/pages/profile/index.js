@@ -6,9 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
      <Header> </Header>
-      <Text style={styles.titleText}>
-        Av. Paulista 4281 - São Paulo (SP)
-        </Text>
+      
     </View>
   );
 }

@@ -54,8 +54,9 @@ export function RoutesHome(){
             },
             
             tabStyle:{
-                paddingBottom: 5,
+                paddingBottom: 8,
                 paddingTop: 5,
+                
     
             }
         }}
@@ -63,20 +64,11 @@ export function RoutesHome(){
             <Tab.Screen
              name="Home"
             component={Home} 
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Entypo name="home" size={size} color={color}/>
-                ),
-                headerShown: false 
-            }}
-            />
-
-            <Tab.Screen 
-            name="Pesquisar"
-            component={Search} 
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Feather name="search" size={size} color={color}/>
+            options={
+                
+                {
+                tabBarIcon: ({ size, }) => (
+                    <Entypo name="home" size={size} color={"#4ECB19"}/>
                 ),
                 headerShown: false 
             }}
@@ -86,8 +78,19 @@ export function RoutesHome(){
             name="Pedidos" 
             component={Orders} 
             options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Feather name="shopping-bag" size={size} color={color}/>
+                tabBarIcon: ({ size, }) => (
+                    <Feather name="shopping-bag" size={size} color={"#4ECB19"}/>
+                ),
+                headerShown: false 
+            }}
+            />
+
+            <Tab.Screen 
+            name="Notificações"
+            component={Search} 
+            options={{
+                tabBarIcon: ({ size, }) => (
+                    <Feather name="bell" size={size} color={"#4ECB19"}/>
                 ),
                 headerShown: false 
             }}
@@ -96,9 +99,12 @@ export function RoutesHome(){
             <Tab.Screen 
             name="Perfil" 
             component={Profile} 
-            options={{
-                tabBarIcon: ({ size, color }) => (
-                    <Feather name="user" size={size} color={color}/>
+            
+            options={
+                
+                {
+                tabBarIcon: ({ size, }) => (
+                    <Feather name="user" size={size} color={"#4ECB19"}/>
                 ),
                 headerShown: false 
             }}
