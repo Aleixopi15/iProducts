@@ -1,0 +1,16 @@
+Um trabalho até a correção oficial:
+Em seu App.tsx ou index.js
+import { LogBox } from "react-native"
+LogBox.ignoreLogs([ 'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.', ])
+
+Em vez de ignorar o erro, você pode resolvê-lo sozinho. Veja como:
+
+Navegar paranode_modules/native-base/src/core/NativeBaseProvider.tsx
+Apague <SSRProvider></SSRProvider>os wraps {children}. Tome cuidado para não deletar {children}.
+Remover SSRProviderimportação. Ou seja, exclua esta linhaimport { SSRProvider } from '@react-native-aria/utils';
+Corra npx patch-package native-base. Selecione sim no prompt.
+Quando o Native Base corrige oficialmente, você pode excluir o patch do diretório patch que foi criado e reinstalarnative-base
+
+Voilá! Problema resolvido.
+
+TK, apaguei o componente e funcionou corretamente.

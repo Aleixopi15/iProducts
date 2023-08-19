@@ -1,11 +1,5 @@
-# iProducts
+### para rodar o projeto
+    node v20.4.0
 
-
-
-Iniciar:
-
-npm install 
-
-expo upgrade
-
-expo start
+    npm install
+    npm run android
