@@ -3,3 +3,5 @@
 
     npm install
     npm run android
+
+    documentação do firebase https://rnfirebase.io/
